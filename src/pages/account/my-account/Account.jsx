@@ -84,9 +84,9 @@ const Account = () => {
                                     </div>
                                 </div>
 
-                                {
+                                {/* {
                                     userAddress && (
-                                        <>
+                                        <> */}
                                             <div className="line"></div>
 
                                             <div className="user_address">
@@ -109,9 +109,9 @@ const Account = () => {
 
                                                 </p>
                                             </div>
-                                        </>
+                                        {/* </>
                                     )
-                                }
+                                } */}
 
                             </div>
                         </div>
