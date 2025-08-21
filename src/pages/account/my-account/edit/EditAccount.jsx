@@ -81,7 +81,7 @@ const EditAccount = () => {
                                     name='name'
                                     placeholder=''
                                     className='form-control'
-                                    required
+                                    // required
                                 />
                             </div>
                         </div>
@@ -93,7 +93,7 @@ const EditAccount = () => {
                                     name='email'
                                     placeholder=''
                                     className='form-control'
-                                    required
+                                    // required
                                 />
                             </div>
                         </div>
@@ -105,7 +105,7 @@ const EditAccount = () => {
                                     name='Mobile_Number'
                                     placeholder=''
                                     className='form-control'
-                                    required
+                                    // required
                                 />
                             </div>
                         </div>
