@@ -1,0 +1,143 @@
+@import "./fonts.scss";
+
+/* ------ Variable ------ */
+
+
+
+:root {
+    --white1: #ffffff;
+    --black1: #000000;
+
+    --color-1: #FFFFFF33;
+    --color-2: #00000066;
+    --color-3: #FFFFFF99;
+    --color-4: #CBCBCB;
+    --color-5: #E7E7E7;
+
+    --gradient-color-1: linear-gradient(180deg, #F7F7F7 0%, #E0E0E0 100%);
+
+
+    --pending: #F4B80C;
+    --delivered: #34A853;
+    --cancelled: #EB4335;
+
+    --bg-color: #ffffff;
+    --black: #000000;
+    --white: #ffffff;
+
+    --theme-toggle-border: #0D1C39;
+    --theme-toggle-hover: #ffffff;
+
+    --main-btn-color: #0D1C39;
+
+    --border-color: #000000;
+    --input-bg: #00000003;
+    --placeholder-color: #313131;
+    --form-bg: #00000003;
+    --form-shadow: #0000000D;
+    --otp-color: #00643C;
+
+    --gradient-color1: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0) 100%);
+
+    --color1: #0000000D;
+    --color2: #060606;
+    --color3: #000000;
+    --color4: #0000001A;
+    --color5: #00000099;
+    --color6: #F2F2F2;
+    --color7: #ffffff;
+    --color8: #000000;
+    --color9: #00000033;
+}
+
+
+[data-theme='dark'] {
+    --bg-color: #0D1C39;
+    --black: #ffffff;
+    --white: #000000;
+
+    --theme-toggle-border: #ffffff;
+    --theme-toggle-hover: #0D1C39;
+
+    --main-btn-color: #E4BC88;
+
+    --border-color: #FFFFFF0D;
+    --input-bg: #FFFFFF03;
+    --placeholder-color: #313131;
+    --form-bg: #0A1937;
+    --form-shadow: #FFFFFF0D;
+    --otp-color: #ffffff;
+
+    --gradient-color1: linear-gradient(180deg, #0A1937 0%, rgba(10, 25, 55, 0) 100%);
+
+    --color1: #0A1937;
+    --color2: #0A1937;
+    --color3: #061531;
+    --color4: #FFFFFF1A;
+    --color5: #FFFFFF99;
+    --color6: #0A1937;
+    --color7: #0A1937;
+    --color8: #E4BC88;
+    --color9: #00000033;
+}
+
+
+/* -- Font-Family -- */
+$dm-sans : 'DM Sans',
+sans-serif;
+$avenir : 'Avenir LT Std',
+sans-serif;
+// $times : 'Times New Roman Custom';
+$times: 'Times New Roman', serif;
+
+
+
+
+/* -- Color -- */
+$white1: var(--white1);
+$black1: var(--black1);
+
+$color-1: var(--color-1);
+$color-2: var(--color-2);
+$color-3: var(--color-3);
+$color-4: var(--color-4);
+$color-5: var(--color-5);
+
+$gradient-color-1: var(--gradient-color-1);
+
+/* -- Status -- */
+$pending : var(--pending);
+$delivered : var(--delivered);
+$cancelled : var(--cancelled);
+
+$bg-color: var(--bg-color);
+$black: var(--black);
+$white: var(--white);
+
+$theme-toggle-border: var(--theme-toggle-border);
+$theme-toggle-hover: var(--theme-toggle-hover);
+
+/* -- Button -- */
+$main-btn-color: var(--main-btn-color);
+
+/* -- Form-Input -- */
+$border-color: var(--border-color);
+$border: 1px solid var(--border-color);
+$input-bg: var(--input-bg);
+$placeholder-color: var(--placeholder-color);
+$form-bg: var(--form-bg);
+$form-shadow: var(--form-shadow);
+$otp-color: var(--otp-color);
+
+/* -- Color -- */
+$gradient-color1: var(--gradient-color1);
+
+$color1: var(--color1);
+$color2: var(--color2);
+$color3: var(--color3);
+$color4: var(--color4);
+$color5: var(--color5);
+$color6: var(--color6);
+$color7: var(--color7);
+$color8: var(--color8);
+$color9: var(--color9);

@@ -1,0 +1,246 @@
+@import "../../css/variables.scss";
+
+// ------ Account Start ------
+.account {
+    padding-block: 80px;
+
+    .page_menu {
+        font-family: $avenir;
+        font-weight: 600;
+        font-size: 20px;
+        color: $black;
+
+        margin-bottom: 40px;
+
+        span {
+            font-family: $avenir;
+            font-weight: 700;
+        }
+    }
+
+    .account_overview {
+        padding-left: 36px;
+
+        h4 {
+            font-family: $times;
+            font-weight: 700;
+            font-size: 30px;
+            color: $black;
+            margin-bottom: 20px;
+
+            &.wishlist {
+                margin-bottom: 30px;
+            }
+        }
+
+        .details {
+            border: 1px solid $color4;
+            border-radius: 16px;
+
+            padding: 40px;
+
+            // My-Account
+            .user_info {
+                .name {
+                    font-family: $avenir;
+                    font-weight: 600;
+                    font-size: 24px;
+                    color: $black;
+                }
+
+                .email,
+                .phone {
+                    font-family: $avenir;
+                    font-weight: 600;
+                    font-size: 20px;
+                    color: $black;
+                }
+
+                .email {
+                    margin-block: 5px;
+                }
+
+                button{
+                    background: none;
+                    border: none;
+                }
+            }
+
+            .line {
+                border: 1px solid $color4;
+                margin-block: 40px;
+            }
+
+            .user_address {
+                .title {
+                    font-family: $avenir;
+                    font-weight: 600;
+                    font-size: 24px;
+                    color: $black;
+
+                    &:last-of-type {
+                        margin-block: 5px;
+                    }
+                }
+
+                p {
+                    font-family: $avenir;
+                    font-weight: 600;
+                    font-size: 20px;
+                    color: $black;
+                }
+            }
+
+            // My-Orders
+            .order_box {
+                .image {
+                    height: 100%;
+                    border-radius: 10px;
+                    overflow: hidden;
+
+                    img {
+                        max-height: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .order_detail {
+                    padding-left: 20px;
+
+                    .id {
+                        font-family: $avenir;
+                        font-weight: 600;
+                        font-size: 20px;
+                        color: $black;
+
+                        span {
+                            font-family: $avenir;
+                            font-weight: 700;
+                        }
+                    }
+
+                    .name,
+                    .price {
+                        font-family: $times;
+                        font-weight: 700;
+                        font-size: 24px;
+                        color: $black;
+                        margin-block: 5px;
+                    }
+
+                    .price {
+                        font-size: 20px;
+                    }
+
+                    .order_btn {
+                        width: fit-content;
+                        height: fit-content;
+                        padding-inline: 27px;
+                    }
+                }
+            }
+
+            // Address
+            .address {
+
+                .type,
+                p {
+                    font-family: $avenir;
+                    font-weight: 600;
+                    font-size: 24px;
+                    color: $black;
+                }
+
+                p {
+                    margin-top: 10px;
+                    font-size: 20px;
+                    line-height: 26px;
+                }
+
+                .status {
+                    padding: 5px 16px;
+                }
+
+                .menu_btn {
+                    background: none;
+                    border: 0;
+                }
+
+                .dropdown-menu {
+                    // inset: 3px 0 auto auto !important;
+                    border: 0;
+
+                    background-color: $color6;
+                    padding-block: 15px;
+
+                    .dropdown-item {
+                        font-family: $avenir;
+                        font-weight: 600;
+                        font-size: 18px;
+                        color: $black;
+                        padding-inline: 18px;
+
+                        &:active,
+                        &.active {
+                            background-color: transparent !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Address
+        .address_btn {
+            height: fit-content;
+            margin-top: 40px;
+            padding-block: 16px;
+            font-size: 20px;
+        }
+
+        // Wishlist
+        .wishlist_box {
+            .image {
+                img {
+                    width: 100%;
+                }
+            }
+
+            .wishlist_detail {
+                margin-top: 10px;
+
+                .rating {}
+
+                .like {
+                    button {
+                        background: none;
+                        border: 0;
+                    }
+                }
+
+                .name,
+                .price {
+                    font-family: $times;
+                    font-weight: 700;
+                    font-size: 20px;
+                    color: $black;
+                }
+
+                .name {
+                    margin-top: 8px;
+                }
+
+                p {
+                    font-family: $avenir;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 26px;
+                    color: $color5;
+                    padding-block: 10px;
+                }
+            }
+        }
+
+    }
+}
+
+// ------ Account End ------

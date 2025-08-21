@@ -1,0 +1,255 @@
+@import "../../css/variables.scss";
+
+// ------ Product Start ------
+.product {
+    padding-block: 80px;
+
+    .product_top {
+        margin-bottom: 40px;
+
+        h4 {
+            font-family: $times;
+            font-weight: 700;
+            font-size: 30px;
+            color: $black;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-family: $avenir;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 26px;
+            color: $color5;
+        }
+
+        .filtering_area {
+            .sorting {
+                .form-control {
+                    width: fit-content;
+                    height: 100%;
+                    background-color: $input-bg;
+                    font-family: $avenir;
+                    border: $border;
+                    border-radius: 6px;
+                    font-weight: 400;
+                    font-size: 18px;
+                    color: $black;
+                    padding: 15px 22px;
+
+                }
+            }
+
+            .searching {
+                width: fit-content;
+                display: flex;
+                align-items: center;
+                border: $border;
+                border-radius: 6px;
+                overflow: hidden;
+                width: 100%;
+                max-width: 500px;
+
+                input {
+                    border: none;
+                    outline: none;
+                    padding: 15px 22px;
+                    font-family: $avenir;
+                    font-weight: 400;
+                    font-size: 18px;
+                    color: $black;
+                    width: 100%;
+                    height: 100%;
+
+                    &::placeholder {
+                        color: var(--placeholder);
+                    }
+                }
+
+                .search_btn {
+                    background-color: $black;
+                    border: none;
+
+                    font-family: $avenir;
+                    font-weight: 600;
+                    font-size: 20px;
+                    color: $white;
+                    padding: 15px 37px;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .product_list {
+        .filter_area {
+            border: 1px solid $color1;
+            border-radius: 16px;
+            padding: 20px;
+
+            .mb-40 {
+                margin-bottom: 40px;
+            }
+
+            .title {
+                font-family: $times;
+                font-weight: 700;
+                font-size: 20px;
+                color: $black;
+                margin-bottom: 10px;
+            }
+
+            button {
+                background: none;
+                border: none;
+                font-family: $avenir;
+                font-weight: 400;
+                font-size: 18px;
+                color: $black;
+            }
+
+            .pricing {
+                .custom-track {
+                    margin-block: 20px 22px;
+
+                    .custom-thumb {}
+                }
+
+                .price_control {
+
+                    .counter {
+                        border: 1px solid $color-5;
+                        border-radius: 6px;
+
+                        span {
+                            font-family: $avenir;
+                            font-weight: 600;
+                            font-size: 15px;
+                            color: $black;
+                            padding: 0 12px;
+                        }
+
+                        .d-grid {
+                            border-left: 1px solid $color-5;
+
+                            button {
+                                padding: 8px;
+                                font-size: 0;
+
+                                img {
+                                    width: 8px;
+                                    height: 4px;
+                                }
+
+                                &:first-child {
+                                    border-bottom: 1px solid $color-5;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+
+            ul {
+                li {
+                    .custom-checkbox {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        cursor: pointer;
+
+                        border: 1px solid $color9;
+                        border-radius: 10px;
+                        padding: 14px 16px;
+                        margin-bottom: 15px;
+
+                        span {
+                            font-family: $avenir;
+                            font-weight: 400;
+                            font-size: 16px;
+                            color: $black;
+                        }
+
+                        .form-check-input {
+                            background-color: $input-bg;
+                            border: 1px solid $color9;
+                            width: 22px;
+                            height: 22px;
+                            margin-top: 0;
+
+                            &:checked {
+                                // background-color: $input-bg;
+                                border-color: $theme-toggle-border;
+                                --bs-form-check-bg-image: url("../../assets/images/product/checked-light.svg");
+                                background-size: 13px;
+                            }
+                        }
+
+                        &:has(.form-check-input:checked) {
+                            border-color: $theme-toggle-border;
+
+                            span {
+                                color: $theme-toggle-border;
+                            }
+                        }
+                    }
+
+                    &:last-of-type .custom-checkbox {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .product_area {
+            .product_box {
+                .image {
+                    overflow: hidden;
+                    border-radius: 16px;
+
+                    img {
+                        width: 100%;
+                        transition: transform 0.5s ease;
+                    }
+
+                    &:hover {
+                        img {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+
+                .detail {
+                    margin-top: 10px;
+
+                    .name {
+                        font-family: $times;
+                        font-weight: 700;
+                        font-size: 20px;
+                        color: $black;
+                        cursor: pointer;
+                    }
+
+                    .like {
+                        button {
+                            background: none;
+                            border: none;
+                        }
+                    }
+
+                    .price {
+                        font-family: $times;
+                        font-weight: 700;
+                        font-size: 32px;
+                        color: $black;
+                        margin-top: 7px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ------ Product End ------

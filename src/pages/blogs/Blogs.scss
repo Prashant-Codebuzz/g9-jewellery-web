@@ -1,0 +1,79 @@
+@import "../../css/variables.scss";
+
+// ------ Blogs Start ------
+.blogs {
+    padding-block: 80px;
+
+    .blogs_top_content {
+        h6 {
+            font-family: $avenir;
+            font-weight: 600;
+            font-size: 20px;
+            color: $black;
+        }
+
+        h4 {
+            font-family: $times;
+            font-weight: 700;
+            font-size: 30px;
+            color: $black;
+            margin-block: 10px;
+        }
+
+        p {
+            font-family: $avenir;
+            font-weight: 600;
+            font-size: 20px;
+            color: $color5;
+            margin-bottom: 40px;
+        }
+    }
+
+    .blog_box {
+        .image {
+            overflow: hidden;
+            border-radius: 16px;
+
+            img {
+                width: 100%;
+                transition: transform 0.5s ease;
+            }
+
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+
+        .detail {
+            margin-top: 20px;
+
+            .name {
+                font-family: $times;
+                font-weight: 700;
+                font-size: 20px;
+                color: $black;
+            }
+
+            p {
+                font-family: $avenir;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 26px;
+                color: $color5;
+                margin-block: 10px 20px;
+            }
+
+            .read_more {
+                width: fit-content;
+                height: fit-content;
+                background-color: $color8;
+                padding: 16px 68px;
+            }
+        }
+    }
+}
+
+// ------ Blogs End ------
