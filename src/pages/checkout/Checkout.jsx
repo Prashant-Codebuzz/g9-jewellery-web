@@ -6,15 +6,41 @@ import "./Checkout.scss"
 
 // Image
 import OrderImg from "../../assets/images/account/my-orders.svg";
-// Light
+// Light    
 import HomeLight from "../../assets/images/account/home-light.svg";
 import WorkLight from "../../assets/images/account/work-light.svg";
 import OtherLight from "../../assets/images/account/other-light.svg";
+// Dark
+import HomeDark from "../../assets/images/account/home-dark.svg";
+import WorkDark from "../../assets/images/account/work-dark.svg";
+import OtherDark from "../../assets/images/account/other-dark.svg";
 
+import ChooseAddress from '../../components/modal/choose-address/ChooseAddress';
 
+import useThemeMode from '../../hooks/useThemeMode';
+
+const initialModalState = {
+    chooseAddress: false,
+}
 const Checkout = () => {
 
+    const ThemeMode = useThemeMode();
+
     const navigate = useNavigate();
+
+    const initialAddressState = {
+        type: "Home",
+        image: ThemeMode ? HomeLight : HomeDark,
+        address: "123, Shyamdham Soc, Nana Varachha Surat, Gujarat, India - 395006",
+    }
+
+    const [modalShow, setModalShow] = useState(initialModalState);
+
+    const [selectedAddress, setSelectedAddress] = useState(initialAddressState);
+
+    const handleClose = () => {
+        setModalShow(initialModalState);
+    }
 
     return (
         <>
@@ -40,16 +66,23 @@ const Checkout = () => {
                                 <div className="address px-0">
                                     <div className='title d-flex align-items-center'>
                                         {/* <img src={userAddress?.address_type === 'Home' ? HomeLight : userAddress?.address_type === 'Work' ? WorkLight : OtherLight} alt="" className='img-fluid me-3' draggable={false} /> */}
-                                        <img src={HomeLight} alt="" className='img-fluid me-3' draggable={false} />
+                                        <img src={selectedAddress.image} alt="" className='img-fluid me-3' draggable={false} />
 
-                                        Home
+                                        {selectedAddress.type}
                                     </div>
 
                                     <p className='mb-0'>
-                                        123, Shyamdham Soc, Nana Varachha Surat, Gujarat, India - 395006
+                                        {/* 123, Shyamdham Soc, Nana Varachha Surat, Gujarat, India - 395006 */}
+                                        {selectedAddress.address}
                                     </p>
 
-                                    <button type='button' className='main_btn choose_another_address'>
+                                    <button
+                                        type='button'
+                                        className='main_btn choose_another_address'
+                                        onClick={() => {
+                                            setModalShow({ ...modalShow, chooseAddress: true });
+                                        }}
+                                    >
                                         CHOOSE ANOTHER ADDRESS
                                     </button>
                                 </div>
@@ -120,6 +153,11 @@ const Checkout = () => {
                 </div>
             </div>
             {/* ------ Checkout End ------ */}
+
+
+            {/* Modal-Choose-Address */}
+            <ChooseAddress show={modalShow.chooseAddress} handleClose={handleClose} handleSelectAddress={(i) => setSelectedAddress(i)} />
+
 
         </>
     )

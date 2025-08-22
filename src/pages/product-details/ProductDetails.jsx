@@ -12,15 +12,26 @@ import ProductDetail1 from "../../assets/images/product/product-detail1.svg";
 import ProductDetail2 from "../../assets/images/product/product-detail2.svg";
 import ProductDetail3 from "../../assets/images/product/product-detail3.svg";
 import ProductDetail4 from "../../assets/images/product/product-detail4.svg";
-import LeftArrow from "../../assets/images/home/left_arrow.svg";
+
 // Light
 import UnLikeLight from "../../assets/images/account/unlike-light.svg";
 import FastShippingLight from "../../assets/images/product/fast-shipping-light.svg";
 import PremiumQualityLight from "../../assets/images/product/premium-quality-light.svg";
 import CustomizableLight from "../../assets/images/product/customizable-light.svg";
+import LeftArrow from "../../assets/images/home/left_arrow.svg";
+
+// Dark
+import FastShippingDark from "../../assets/images/product/fast-shipping-dark.svg";
+import PremiumQualityDark from "../../assets/images/product/premium-quality-dark.svg";
+import CustomizableDark from "../../assets/images/product/customizable-dark.svg";
+import LeftArrowDark from "../../assets/images/home/left_arrow-dark.svg";
+
+import useThemeMode from '../../hooks/useThemeMode';
 
 
 const ProductDetails = () => {
+
+    const ThemeMode = useThemeMode();
 
     const navigate = useNavigate();
 
@@ -57,7 +68,7 @@ const ProductDetails = () => {
                             {/* Thumbnail Image */}
                             <div className="thumbnail_images d-flex justify-content-between align-items-center gap-3">
                                 <button type='button' className='thumbnail-prev' onClick={handlePrev}>
-                                    <img src={LeftArrow} alt="" className="img-fluid" draggable={false} />
+                                    <img src={ThemeMode ? LeftArrowDark : LeftArrow } alt="" className="img-fluid" draggable={false} />
                                 </button>
 
                                 <div className="thumbnail-container">
@@ -74,7 +85,7 @@ const ProductDetails = () => {
                                 </div>
 
                                 <button type='button' className='thumbnail-next' onClick={handleNext}>
-                                    <img src={LeftArrow} alt="" className="img-fluid" draggable={false} />
+                                    <img src={ThemeMode ? LeftArrowDark : LeftArrow } alt="" className="img-fluid" draggable={false} />
                                 </button>
                             </div>
                         </div>
@@ -127,7 +138,7 @@ const ProductDetails = () => {
                             <div className="feature d-flex justify-content-between align-items-center">
                                 <div className="name">
                                     <div className="image">
-                                        <img src={FastShippingLight} alt="Fast Shipping" className='img-fluid' draggable={false} />
+                                        <img src={ThemeMode ? FastShippingLight : FastShippingDark} alt="Fast Shipping" className='img-fluid' draggable={false} />
                                     </div>
 
                                     <span className='ms-3'>Fast Shipping</span>
@@ -135,7 +146,7 @@ const ProductDetails = () => {
                                 <div className="line"></div>
                                 <div className="name">
                                     <div className="image">
-                                        <img src={PremiumQualityLight} alt="Premium Quality" className='img-fluid' draggable={false} />
+                                        <img src={ThemeMode ? PremiumQualityLight : PremiumQualityDark} alt="Premium Quality" className='img-fluid' draggable={false} />
                                     </div>
 
                                     <span className='ms-3'>Premium Quality</span>
@@ -143,7 +154,7 @@ const ProductDetails = () => {
                                 <div className="line"></div>
                                 <div className="name">
                                     <div className="image">
-                                        <img src={CustomizableLight} alt="Customizable" className='img-fluid' draggable={false} />
+                                        <img src={ThemeMode ? CustomizableLight : CustomizableDark} alt="Customizable" className='img-fluid' draggable={false} />
                                     </div>
 
                                     <span className='ms-3'>Customizable</span>

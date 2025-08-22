@@ -31,6 +31,26 @@ a {
     box-shadow: none !important;
 }
 
+.form-select {
+    --bs-form-select-bg-img: url("../assets/images/selected-light.svg");
+
+    option {
+        color: $black !important;
+        background-color: $input-bg !important;
+
+    }
+}
+
+[data-theme="dark"] {
+    .form-select {
+        --bs-form-select-bg-img: url("../assets/images/selected-dark.svg");
+
+        option {
+            background-color: #00000003 !important;
+        }
+    }
+}
+
 .cursor-pointer {
     cursor: pointer;
 }
@@ -50,7 +70,7 @@ a {
     font-family: $times;
     font-weight: 700;
     font-size: 18px; //20px
-    color: $white1;
+    color: $color7;
 
     padding-block: 10px;
     height: 49px;

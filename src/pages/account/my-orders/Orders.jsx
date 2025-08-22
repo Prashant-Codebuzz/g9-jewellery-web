@@ -7,8 +7,12 @@ import React from 'react'
 import OrderImg from "../../../assets/images/account/my-orders.svg";
 
 import AccountSidebar from '../../../components/account-sidebar/AccountSidebar';
+import { useNavigate } from 'react-router-dom';
 
 const Orders = () => {
+
+    const navigate = useNavigate();
+
     return (
         <>
 
@@ -48,13 +52,13 @@ const Orders = () => {
                                         <div className="name">Silver Engagement Diamond Ring</div>
                                         <div className="price">Total: $138.00</div>
 
-                                        <button type='button' className='main_btn order_btn'>
+                                        <button type='button' className='main_btn order_btn' onClick={() => navigate(`/order-details/${1}`)}>
                                             Order Details
                                         </button>
                                     </div>
                                 </div>
 
-                                <div className="line"></div>
+                                <div className="line"></div>    
 
                                 <div className="order_box d-flex">
                                     <div className="image">
@@ -74,7 +78,7 @@ const Orders = () => {
                                         <div className="name">Silver Engagement Diamond Ring</div>
                                         <div className="price">Total: $165.00</div>
 
-                                        <button type='button' className='main_btn order_btn'>
+                                        <button type='button' className='main_btn order_btn' onClick={() => navigate(`/order-details/${1}`)}>
                                             Order Details
                                         </button>
                                     </div>
@@ -100,7 +104,7 @@ const Orders = () => {
                                         <div className="name">Silver Engagement Diamond Ring</div>
                                         <div className="price">Total: $125.00</div>
 
-                                        <button type='button' className='main_btn order_btn'>
+                                        <button type='button' className='main_btn order_btn' onClick={() => navigate(`/order-details/${1}`)}>
                                             Order Details
                                         </button>
                                     </div>

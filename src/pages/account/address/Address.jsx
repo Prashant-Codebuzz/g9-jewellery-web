@@ -8,6 +8,12 @@ import HomeLight from "../../../assets/images/account/home-light.svg";
 import WorkLight from "../../../assets/images/account/work-light.svg";
 import OtherLight from "../../../assets/images/account/other-light.svg";
 import MenuLight from "../../../assets/images/account/menu-light.svg";
+// Dark
+import HomeDark from "../../../assets/images/account/home-dark.svg";
+import WorkDark from "../../../assets/images/account/work-dark.svg";
+import OtherDark from "../../../assets/images/account/other-dark.svg";
+import MenuDark from "../../../assets/images/account/menu-dark.svg";
+
 
 import AccountSidebar from '../../../components/account-sidebar/AccountSidebar';
 
@@ -17,6 +23,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { reqtoDeleteManageAddress, reqtoGetManageAddress, reqtoSetPrimaryManageAddress } from '../../../redux-Toolkit/services/AccountServices';
 import { editManageAddress } from '../../../redux-Toolkit/slices/AccountSlice';
+import useThemeMode from '../../../hooks/useThemeMode';
 
 const initialModalState = {
     primary: false,
@@ -24,6 +31,8 @@ const initialModalState = {
 }
 
 const Address = () => {
+
+    const ThemeMode = useThemeMode();
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -90,7 +99,7 @@ const Address = () => {
                                 <div className="address">
                                     <div className='d-flex align-items-center justify-content-between'>
                                         <div className='type d-flex align-items-center'>
-                                            <img src={HomeLight} alt="" className='img-fluid' draggable={false} />
+                                            <img src={ThemeMode ? HomeLight : HomeDark} alt="" className='img-fluid' draggable={false} />
 
                                             <span className='mx-3'>Home</span>
 
@@ -101,7 +110,7 @@ const Address = () => {
 
                                         <div>
                                             <button type='button' className='menu_btn' data-bs-toggle="dropdown" aria-expanded="false">
-                                                <img src={MenuLight} alt="" className='img-fluid' draggable={false} />
+                                                <img src={ThemeMode ? MenuLight : MenuDark} alt="" className='img-fluid' draggable={false} />
                                             </button>
                                             <ul className="dropdown-menu dropdown-menu-end">
                                                 <li><button type='button' className="dropdown-item" onClick={() => { setModalShow({ ...modalShow, primary: true }) }}>Set As Primary</button></li>
@@ -124,14 +133,14 @@ const Address = () => {
                                 <div className="address">
                                     <div className='d-flex align-items-center justify-content-between'>
                                         <div className='type d-flex align-items-center'>
-                                            <img src={WorkLight} alt="" className='img-fluid' draggable={false} />
+                                            <img src={ThemeMode ? WorkLight : WorkDark} alt="" className='img-fluid' draggable={false} />
 
                                             <span className='mx-3'>Work</span>
                                         </div>
 
                                         <div>
                                             <button type='button' className='menu_btn' data-bs-toggle="dropdown" aria-expanded="false">
-                                                <img src={MenuLight} alt="" className='img-fluid' draggable={false} />
+                                                <img src={ThemeMode ? MenuLight : MenuDark} alt="" className='img-fluid' draggable={false} />
                                             </button>
                                             <ul className="dropdown-menu dropdown-menu-end">
                                                 <li><button type='button' className="dropdown-item" onClick={() => { setModalShow({ ...modalShow, primary: true }) }}>Set As Primary</button></li>
@@ -154,14 +163,14 @@ const Address = () => {
                                 <div className="address">
                                     <div className='d-flex align-items-center justify-content-between'>
                                         <div className='type d-flex align-items-center'>
-                                            <img src={OtherLight} alt="" className='img-fluid' draggable={false} />
+                                            <img src={ThemeMode ? OtherLight : OtherDark} alt="" className='img-fluid' draggable={false} />
 
                                             <span className='mx-3'>Other</span>
                                         </div>
 
                                         <div>
                                             <button type='button' className='menu_btn' data-bs-toggle="dropdown" aria-expanded="false">
-                                                <img src={MenuLight} alt="" className='img-fluid' draggable={false} />
+                                                <img src={ThemeMode ? MenuLight : MenuDark} alt="" className='img-fluid' draggable={false} />
                                             </button>
                                             <ul className="dropdown-menu dropdown-menu-end">
                                                 <li><button type='button' className="dropdown-item" onClick={() => { setModalShow({ ...modalShow, primary: true }) }}>Set As Primary</button></li>

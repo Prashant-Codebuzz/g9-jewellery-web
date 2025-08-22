@@ -29,6 +29,7 @@ header {
         padding-block: 15px;
 
         form {
+            background-color: $bg-color;
             margin-left: 80px;
             display: flex;
             align-items: center;
@@ -39,6 +40,7 @@ header {
             max-width: 500px;
 
             input {
+                background-color: $bg-color;
                 border: none;
                 outline: none;
                 padding: 15px 22px;
@@ -157,7 +159,8 @@ header {
         nav .main_btn.ask_price {
             width: fit-content;
             height: fit-content;
-            background-color: $black;
+            background-color: $main-btn-color;
+            color: $color7;
             padding: 16px 30px;
         }
 
@@ -193,6 +196,7 @@ header {
                         font-family: $times;
                         font-weight: 700;
                         font-size: 30px;
+                        color: $black;
                     }
 
                     ul {
@@ -205,7 +209,7 @@ header {
                                 font-family: $avenir;
                                 font-weight: 600;
                                 font-size: 18px;
-                                color: $black1;
+                                color: $black;
                             }
                         }
                     }

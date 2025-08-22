@@ -21,7 +21,6 @@ const initialState = {
 const EditAccount = () => {
 
     const navigate = useNavigate();
-
     const { id } = useParams();
     // const navigate = useNavigate();
     // const dispatch = useDispatch();

@@ -9,12 +9,15 @@ import LogoDark from "../../assets/images/authentication/logo-dark.svg";
 import { useDispatch, useSelector } from 'react-redux';
 import { loaders } from '../loader/Loader';
 import { reqtoOtpMethod } from '../../redux-Toolkit/services/AuthServices';
+import useThemeMode from '../../hooks/useThemeMode';
 
 const initialState = {
     type: '',
 }
 
 const OtpMethod = () => {
+
+    const ThemeMode = useThemeMode();
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -50,7 +53,7 @@ const OtpMethod = () => {
         console.log("reqtoOtpMethod--> Res", res);
 
         // if (res.payload?.status) {
-            navigate("/otp-verify");
+        navigate("/otp-verify");
         // }
     }
 
@@ -60,7 +63,7 @@ const OtpMethod = () => {
                 <div className="row justify-content-center align-items-center h-100">
                     <div className="col-10 col-sm-9 col-md-7 col-lg-6 col-xl-5 col-xxl-4">
                         <div className="logo text-center">
-                            <img src={LogoLight} alt="Logo" className='img-fluid' draggable={false} />
+                            <img src={ThemeMode ? LogoLight : LogoDark} alt="Logo" className='img-fluid' draggable={false} />
                         </div>
 
                         <form onSubmit={handleSubmit}>
@@ -85,14 +88,14 @@ const OtpMethod = () => {
                                                 checked={type === "email" || formData.type === "email"}
                                                 required
                                                 disabled={
-                                                    type ? 
-                                                    // type === "sms" || type === "whatsapp" ? 
+                                                    type ?
+                                                        // type === "sms" || type === "whatsapp" ? 
                                                         // false : 
-                                                            type !== "email" ? 
-                                                                true : 
-                                                                    type === "select" ? 
-                                                                        true : false 
-                                                    : false}
+                                                        type !== "email" ?
+                                                            true :
+                                                            type === "select" ?
+                                                                true : false
+                                                        : false}
                                             />
                                             <label className="form-check-label" htmlFor="email">
                                                 Email

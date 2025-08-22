@@ -11,10 +11,21 @@ import CartLight from "../../assets/images/header/cart-light.svg";
 import UserLight from "../../assets/images/header/user-light.svg";
 import DropdownLight from "../../assets/images/header/dropdown-light.svg";
 import ProductJewelleryLight from "../../assets/images/header/product-jewellery-light.svg";
+// Dark
+import LogoDark from "../../assets/images/header/logo-dark.svg";
+import CartDark from "../../assets/images/header/cart-dark.svg";
+import UserDark from "../../assets/images/header/user-dark.svg";
+import DropdownDark from "../../assets/images/header/dropdown-dark.svg";
+import ProductJewelleryDark from "../../assets/images/header/product-jewellery-dark.svg";
+
+import useThemeMode from '../../hooks/useThemeMode';
 
 
 
 const Header = () => {
+
+    const ThemeMode = useThemeMode();
+
     return (
         <>
 
@@ -36,7 +47,7 @@ const Header = () => {
                             <div className="container-fluid p-0">
                                 <div className='navbar-brand me-0'>
                                     <Link to="/home">
-                                        <img src={LogoLight} alt="" className='img-fluid logo' />
+                                        <img src={ThemeMode ? LogoLight : LogoDark} alt="" className='img-fluid logo' />
                                     </Link>
                                 </div>
 
@@ -48,7 +59,7 @@ const Header = () => {
                                     <div className="offcanvas-header">
                                         <div className='navbar-brand'>
                                             <Link>
-                                                <img src={LogoLight} alt="" className='img-fluid' />
+                                                <img src={ThemeMode ? LogoLight : LogoDark} alt="" className='img-fluid' />
                                             </Link>
                                         </div>
                                         <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -66,7 +77,7 @@ const Header = () => {
                                         <div className='accounts ms-auto d-none d-lg-block d-lg-flex align-items-lg-center'>
                                             <div className=''>
                                                 <Link to="/cart" className='d-flex align-items-center cart' >
-                                                    <img src={CartLight} alt="" className='img-fluid' draggable={false} />
+                                                    <img src={ThemeMode ? CartLight : CartDark} alt="" className='img-fluid' draggable={false} />
 
                                                     <span className=''></span>
 
@@ -82,12 +93,12 @@ const Header = () => {
                                                         Currency
                                                     </div>
 
-                                                    <img src={DropdownLight} alt="" className='img-fluid' draggable={false} />
+                                                    <img src={ThemeMode ? DropdownLight : DropdownDark} alt="" className='img-fluid' draggable={false} />
                                                 </Link>
                                             </div>
                                             <div className=''>
                                                 <Link to="/account">
-                                                    <img src={UserLight} alt="" className='img-fluid' draggable={false} />
+                                                    <img src={ThemeMode ? UserLight : UserDark} alt="" className='img-fluid' draggable={false} />
                                                 </Link>
                                             </div>
                                         </div>
@@ -203,7 +214,7 @@ const Header = () => {
                                         <li className="nav-item mb-2 mb-lg-0">
                                             <NavLink className="nav-link d-flex align-items-center">
                                                 Products
-                                                <img src={DropdownLight} alt="" className='img-cluid ms-2' draggable={false} />
+                                                <img src={ThemeMode ? DropdownLight : DropdownDark} alt="" className='img-cluid ms-2' draggable={false} />
                                             </NavLink>
 
                                             {/* <ul className="sub-menu pd-x">
@@ -246,7 +257,7 @@ const Header = () => {
                                                         </div>
                                                         <div className="col-lg-3">
                                                             <div className="image">
-                                                                <img src={ProductJewelleryLight} alt="Jewellery" className='img-fluid' draggable={false} />
+                                                                <img src={ThemeMode ? ProductJewelleryLight : ProductJewelleryDark} alt="Jewellery" className='img-fluid' draggable={false} />
                                                             </div>
                                                         </div>
                                                     </div>

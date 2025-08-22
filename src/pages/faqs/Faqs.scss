@@ -49,3 +49,10 @@
 }
 
 // ------ Faqs End ------
+
+
+[data-theme="dark"] {
+    .accordion-button:not(.collapsed)::after{
+        
+    }
+}

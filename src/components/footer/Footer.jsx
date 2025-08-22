@@ -12,8 +12,20 @@ import InstagramLight from "../../assets/images/footer/instagram-light.svg";
 import FacebookLight from "../../assets/images/footer/facebook-light.svg";
 import LinkedinLight from "../../assets/images/footer/linkedin-light.svg";
 import YoutubeLight from "../../assets/images/footer/youtube-light.svg";
+// Dark
+import CallDark from "../../assets/images/footer/call-dark.svg";
+import EmailDark from "../../assets/images/footer/email-dark.svg";
+import InstagramDark from "../../assets/images/footer/instagram-dark.svg";
+import FacebookDark from "../../assets/images/footer/facebook-dark.svg";
+import LinkedinDark from "../../assets/images/footer/linkedin-dark.svg";
+import YoutubeDark from "../../assets/images/footer/youtube-dark.svg";
+
+import useThemeMode from '../../hooks/useThemeMode';
 
 const Footer = () => {
+
+    const ThemeMode = useThemeMode();
+
     return (
         <>
 
@@ -80,22 +92,22 @@ const Footer = () => {
 
                     <div className="d-flex justify-content-center flex-wrap gap-4">
                         <Link>
-                            <img src={CallLight} alt="" className='img-fluid' draggable={false} />
+                            <img src={ThemeMode ? CallLight : CallDark} alt="" className='img-fluid' draggable={false} />
                         </Link>
                         <Link>
-                            <img src={EmailLight} alt="" className='img-fluid' draggable={false} />
+                            <img src={ThemeMode ? EmailLight : EmailDark} alt="" className='img-fluid' draggable={false} />
                         </Link>
                         <Link>
-                            <img src={InstagramLight} alt="" className='img-fluid' draggable={false} />
+                            <img src={ThemeMode ? InstagramLight : InstagramDark} alt="" className='img-fluid' draggable={false} />
                         </Link>
                         <Link>
-                            <img src={FacebookLight} alt="" className='img-fluid' draggable={false} />
+                            <img src={ThemeMode ? FacebookLight : FacebookDark} alt="" className='img-fluid' draggable={false} />
                         </Link>
                         <Link>
-                            <img src={LinkedinLight} alt="" className='img-fluid' draggable={false} />
+                            <img src={ThemeMode ? LinkedinLight : LinkedinDark} alt="" className='img-fluid' draggable={false} />
                         </Link>
                         <Link>
-                            <img src={YoutubeLight} alt="" className='img-fluid' draggable={false} />
+                            <img src={ThemeMode ? YoutubeLight : YoutubeDark} alt="" className='img-fluid' draggable={false} />
                         </Link>
                     </div>
                 </div>

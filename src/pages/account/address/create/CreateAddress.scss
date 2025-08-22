@@ -58,7 +58,7 @@
 
                     &:checked {
                         border-color: $main-btn-color;
-                        --bs-form-check-bg-image: none;
+                        --bs-form-check-bg-image: none !important;
 
                         &::before {
                             display: block;

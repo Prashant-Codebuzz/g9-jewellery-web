@@ -14,6 +14,7 @@ import { toast } from 'react-toastify';
 import { useDispatch, useSelector } from 'react-redux';
 import { reqtoSignUp } from '../../../redux-Toolkit/services/AuthServices';
 import { loaders } from '../../../components/loader/Loader';
+import useThemeMode from '../../../hooks/useThemeMode';
 
 const initialState = {
     name: '',
@@ -24,6 +25,8 @@ const initialState = {
 }
 
 const SignUp = () => {
+
+    const ThemeMode = useThemeMode();
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -77,7 +80,7 @@ const SignUp = () => {
                 <div className="row justify-content-center align-items-center h-100">
                     <div className="col-10 col-sm-9 col-md-7 col-lg-6 col-xl-5 col-xxl-4">
                         <div className="logo text-center">
-                            <img src={LogoLight} alt="Logo" className='img-fluid' draggable={false} />
+                            <img src={ThemeMode ? LogoLight : LogoDark} alt="Logo" className='img-fluid' draggable={false} />
                         </div>
 
                         <form onSubmit={handleSubmit}>

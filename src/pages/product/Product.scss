@@ -51,6 +51,7 @@
                 max-width: 500px;
 
                 input {
+                    background-color: $bg-color;
                     border: none;
                     outline: none;
                     padding: 15px 22px;
@@ -67,13 +68,13 @@
                 }
 
                 .search_btn {
-                    background-color: $black;
+                    background-color: $main-btn-color;
                     border: none;
 
                     font-family: $avenir;
                     font-weight: 600;
                     font-size: 20px;
-                    color: $white;
+                    color: $color7;
                     padding: 15px 37px;
                     height: 100%;
                 }
@@ -83,7 +84,7 @@
 
     .product_list {
         .filter_area {
-            border: 1px solid $color1;
+            border: 1px solid $form-shadow;
             border-radius: 16px;
             padding: 20px;
 
@@ -253,3 +254,14 @@
 }
 
 // ------ Product End ------
+
+
+
+
+[data-theme="dark"] {   
+    .form-check-input {
+        &:checked {
+            --bs-form-check-bg-image: url("../../assets/images/product/checked-dark.svg") !important;
+        }
+    }
+}

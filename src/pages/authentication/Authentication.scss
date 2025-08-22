@@ -35,7 +35,6 @@
 
                         font-weight: 600;
                         font-size: 22px;
-                        color: $main-btn-color;
 
                         &:focus,
                         &.filled {
@@ -55,7 +54,7 @@
                         border: 0;
 
                         font-weight: 700;
-                        color: $main-btn-color;
+                        color: $black;
                         text-decoration: underline;
 
                         transition: opacity 0.3s ease;
@@ -97,7 +96,7 @@
                 font-family: $times;
                 font-weight: 700;
                 font-size: 30px; //28px
-                color: $main-btn-color;
+                color: $black;
                 margin-bottom: 5px;
             }
 
@@ -183,6 +182,10 @@
                 }
             }
 
+            .auth_btn{
+                color: $color7;
+            }
+
             .forgot-password {
                 a {
                     font-family: $avenir;
@@ -214,7 +217,7 @@
 
             .google_btn {
                 font-family: $avenir;
-                background-color: $white;
+                background-color: $form-bg;
                 border: $border;
 
                 font-weight: 400;

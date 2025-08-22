@@ -30,7 +30,7 @@
 
     --main-btn-color: #0D1C39;
 
-    --border-color: #000000;
+    --border-color: #0000000D;
     --input-bg: #00000003;
     --placeholder-color: #313131;
     --form-bg: #00000003;
@@ -48,8 +48,8 @@
     --color7: #ffffff;
     --color8: #000000;
     --color9: #00000033;
+    --color10: #F2F2F2;
 }
-
 
 [data-theme='dark'] {
     --bg-color: #0D1C39;
@@ -78,7 +78,8 @@
     --color6: #0A1937;
     --color7: #0A1937;
     --color8: #E4BC88;
-    --color9: #00000033;
+    --color9: #FFFFFF33;
+    --color10: #FFFFFF33;
 }
 
 
@@ -141,3 +142,4 @@ $color6: var(--color6);
 $color7: var(--color7);
 $color8: var(--color8);
 $color9: var(--color9);
+$color10: var(--color10);

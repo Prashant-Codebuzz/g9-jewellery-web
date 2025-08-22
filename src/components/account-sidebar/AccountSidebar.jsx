@@ -16,11 +16,27 @@ import UserActiveLight from "../../assets/images/account/user-active-light.svg";
 import OrderActiveLight from "../../assets/images/account/order-active-light.svg";
 import AddressActiveLight from "../../assets/images/account/address-active-light.svg";
 import WishlistActiveLight from "../../assets/images/account/wishlist-active-light.svg";
+
+// Dark
+import UserDark from "../../assets/images/account/user-dark.svg";
+import OrderDark from "../../assets/images/account/order-dark.svg";
+import AddressDark from "../../assets/images/account/address-dark.svg";
+import WishlistDark from "../../assets/images/account/wishlist-dark.svg";
+import SignoutDark from "../../assets/images/account/signout-dark.svg";
+
+import UserActiveDark from "../../assets/images/account/user-active-dark.svg";
+import OrderActiveDark from "../../assets/images/account/order-active-dark.svg";
+import AddressActiveDark from "../../assets/images/account/address-active-dark.svg";
+import WishlistActiveDark from "../../assets/images/account/wishlist-active-dark.svg";
+
 import SignOut from '../modal/sign-out/SignOut';
 import { useDispatch, useSelector } from 'react-redux';
 import { reqtoSignOut } from '../../redux-Toolkit/services/AuthServices';
+import useThemeMode from '../../hooks/useThemeMode';
 
 const AccountSidebar = () => {
+
+    const ThemeMode = useThemeMode();
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -52,7 +68,7 @@ const AccountSidebar = () => {
                     <NavLink to="/account">
                         {({ isActive }) => (
                             <>
-                                <img src={isActive ? UserActiveLight : UserLight} alt="" className='img-fluid' draggable={false} />
+                                <img src={isActive ? ThemeMode ? UserActiveLight : UserActiveDark : ThemeMode ? UserLight : UserDark} alt="" className='img-fluid' draggable={false} />
 
                                 Account Overview
                             </>
@@ -64,7 +80,7 @@ const AccountSidebar = () => {
                     <NavLink to="/orders">
                         {({ isActive }) => (
                             <>
-                                <img src={isActive ? OrderActiveLight : OrderLight} alt="" className='img-fluid' draggable={false} />
+                                <img src={isActive ? ThemeMode ? OrderActiveLight : OrderActiveDark : ThemeMode ? OrderLight : OrderDark} alt="" className='img-fluid' draggable={false} />
 
                                 My Orders
                             </>
@@ -76,7 +92,7 @@ const AccountSidebar = () => {
                     <NavLink to="/address">
                         {({ isActive }) => (
                             <>
-                                <img src={isActive ? AddressActiveLight : AddressLight} alt="" className='img-fluid' draggable={false} />
+                                <img src={isActive ? ThemeMode ? AddressActiveLight : AddressActiveDark : ThemeMode ? AddressLight : AddressDark} alt="" className='img-fluid' draggable={false} />
 
                                 Manage Address
                             </>
@@ -88,7 +104,7 @@ const AccountSidebar = () => {
                     <NavLink to="/wishlist">
                         {({ isActive }) => (
                             <>
-                                <img src={isActive ? WishlistActiveLight : WishlistLight} alt="" className='img-fluid' draggable={false} />
+                                <img src={isActive ? ThemeMode ? WishlistActiveLight : WishlistActiveDark : ThemeMode ? WishlistLight : WishlistDark} alt="" className='img-fluid' draggable={false} />
 
                                 My Wishlist
                             </>
@@ -103,7 +119,7 @@ const AccountSidebar = () => {
 
                         }}
                     >
-                        <img src={SignoutLight} alt="" className='img-fluid' draggable={false} />
+                        <img src={ThemeMode ? SignoutLight : SignoutDark} alt="" className='img-fluid' draggable={false} />
 
                         Sign-out
                     </Link>

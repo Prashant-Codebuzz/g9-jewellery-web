@@ -29,8 +29,16 @@ import CallLight from "../../assets/images/home/call-light.svg";
 import EmailLight from "../../assets/images/home/email-light.svg";
 
 // Dark
+import FrameDark from "../../assets/images/frame-dark.svg";
+import ConflictFreeDark from "../../assets/images/home/conflict-free-dark.svg";
+import IndiaDark from "../../assets/images/home/india-dark.svg";
+import ResizingDark from "../../assets/images/home/resizing-dark.svg";
+import CareDark from "../../assets/images/home/care-dark.svg";
 import DiamondDark from "../../assets/images/home/diamond-dark.svg";
-
+import AboutG9JewelleryDark from "../../assets/images/home/about-g9jewellery-dark.svg";
+// import UnLikeDark from "../../assets/images/account/unlike-dark.svg";
+import CallDark from "../../assets/images/home/call-dark.svg";
+import EmailDark from "../../assets/images/home/email-dark.svg";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
@@ -39,9 +47,12 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import useThemeMode from '../../hooks/useThemeMode';
 
 
 const Home = () => {
+
+    const ThemeMode = useThemeMode();
 
     const navigate = useNavigate();
 
@@ -172,7 +183,7 @@ const Home = () => {
                 <div className='text-center'>
                     <h4 className='mb-0'>Explore Our Top Collection</h4>
 
-                    <img src={FrameLight} alt="Frame" className='img-fluid frame' draggable={false} />
+                    <img src={ThemeMode ? FrameLight : FrameDark} alt="Frame" className='img-fluid frame' draggable={false} />
 
                     <p className=''>
                         Explore the epitome of elegance and craftsmanship with our Top Collection - a curated selection of our most loved and best-selling jewellery pieces. Whether you're looking for statement pieces or everyday elegance, our Top Collection brings together beauty, quality, and style in one stunning showcase.
@@ -258,56 +269,56 @@ const Home = () => {
                 >
                     <SwiperSlide>
                         <div className="fancy_slider_box d-flex align-items-center justify-content-center">
-                            <img src={ConflictFreeLight} alt="Conflict" className="img-fluid me-3" draggable={false} />
+                            <img src={ThemeMode ? ConflictFreeLight :  ConflictFreeDark} alt="Conflict" className="img-fluid me-3" draggable={false} />
 
                             <p className="m-0">Conflict Free</p>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="fancy_slider_box d-flex align-items-center justify-content-center">
-                            <img src={IndiaLight} alt="Conflict" className="img-fluid me-3" draggable={false} />
+                            <img src={ThemeMode ? IndiaLight : IndiaDark} alt="Conflict" className="img-fluid me-3" draggable={false} />
 
                             <p className="m-0">Made in INDIA</p>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="fancy_slider_box d-flex align-items-center justify-content-center">
-                            <img src={ResizingLight} alt="Conflict" className="img-fluid me-3" draggable={false} />
+                            <img src={ThemeMode ? ResizingLight : ResizingDark} alt="Conflict" className="img-fluid me-3" draggable={false} />
 
                             <p className="m-0">Free Resizing</p>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="fancy_slider_box d-flex align-items-center justify-content-center">
-                            <img src={CareLight} alt="Conflict" className="img-fluid me-3" draggable={false} />
+                            <img src={ThemeMode ? CareLight : CareDark} alt="Conflict" className="img-fluid me-3" draggable={false} />
 
                             <p className="m-0">Lifetime Care</p>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="fancy_slider_box d-flex align-items-center justify-content-center">
-                            <img src={ConflictFreeLight} alt="Conflict" className="img-fluid me-3" draggable={false} />
+                            <img src={ThemeMode ? ConflictFreeLight :  ConflictFreeDark} alt="Conflict" className="img-fluid me-3" draggable={false} />
 
                             <p className="m-0">Conflict Free</p>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="fancy_slider_box d-flex align-items-center justify-content-center">
-                            <img src={IndiaLight} alt="Conflict" className="img-fluid me-3" draggable={false} />
+                            <img src={ThemeMode ? IndiaLight : IndiaDark} alt="Conflict" className="img-fluid me-3" draggable={false} />
 
                             <p className="m-0">Made in INDIA</p>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="fancy_slider_box d-flex align-items-center justify-content-center">
-                            <img src={ResizingLight} alt="Conflict" className="img-fluid me-3" draggable={false} />
+                            <img src={ThemeMode ? ResizingLight : ResizingDark} alt="Conflict" className="img-fluid me-3" draggable={false} />
 
                             <p className="m-0">Free Resizing</p>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="fancy_slider_box d-flex align-items-center justify-content-center">
-                            <img src={CareLight} alt="Conflict" className="img-fluid me-3" draggable={false} />
+                            <img src={ThemeMode ? CareLight : CareDark} alt="Conflict" className="img-fluid me-3" draggable={false} />
 
                             <p className="m-0">Lifetime Care</p>
                         </div>
@@ -345,13 +356,13 @@ const Home = () => {
                 </div>
 
                 <div className="diamond d1">
-                    <img src={DiamondLight} alt="DiamondLight" className='img-fluid' draggable={false} />
+                    <img src={ThemeMode ? DiamondLight : DiamondDark} alt="DiamondLight" className='img-fluid' draggable={false} />
                 </div>
                 <div className="diamond d2">
-                    <img src={DiamondLight} alt="DiamondLight" className='img-fluid' draggable={false} />
+                    <img src={ThemeMode ? DiamondLight : DiamondDark} alt="DiamondLight" className='img-fluid' draggable={false} />
                 </div>
                 <div className="diamond d3">
-                    <img src={DiamondLight} alt="DiamondLight" className='img-fluid' draggable={false} />
+                    <img src={ThemeMode ? DiamondLight : DiamondDark} alt="DiamondLight" className='img-fluid' draggable={false} />
                 </div>
             </div>
             {/* ------ Customize-Jewellery End ------ */}
@@ -388,7 +399,7 @@ const Home = () => {
                     </div>
                     <div className="col-lg-3">
                         <div className="image">
-                            <img src={AboutG9JewelleryLight} alt="About G9 Jewellery" className='img-fluid' draggable={false} />
+                            <img src={ThemeMode ? AboutG9JewelleryLight : AboutG9JewelleryDark} alt="About G9 Jewellery" className='img-fluid' draggable={false} />
                         </div>
                     </div>
                 </div>
@@ -408,7 +419,7 @@ const Home = () => {
                 <div className='text-center'>
                     <h4 className='mb-0'>Top Selling Products</h4>
 
-                    <img src={FrameLight} alt="Frame" className='img-fluid frame' draggable={false} />
+                    <img src={ThemeMode ? FrameLight : FrameDark} alt="Frame" className='img-fluid frame' draggable={false} />
 
                     <p className=''>
                         Discover our most loved pieces in the Top Selling Jewellery collection. These customer favorites are a perfect blend of timeless
@@ -425,7 +436,7 @@ const Home = () => {
 
                             <div className="detail">
                                 <div className="d-flex justify-content-between align-items-center">
-                                    <div className="name" onClick={()=> navigate("/product-details/1")}>Gold Diamond Bracelets</div>
+                                    <div className="name" onClick={() => navigate("/product-details/1")}>Gold Diamond Bracelets</div>
 
                                     <div className='like'>
                                         <button type='button' className=''>
@@ -446,7 +457,7 @@ const Home = () => {
 
                             <div className="detail">
                                 <div className="d-flex justify-content-between align-items-center">
-                                    <div className="name" onClick={()=> navigate("/product-details/1")}>Silver Diamond Neckless</div>
+                                    <div className="name" onClick={() => navigate("/product-details/1")}>Silver Diamond Neckless</div>
 
                                     <div className='like'>
                                         <button type='button' className=''>
@@ -467,7 +478,7 @@ const Home = () => {
 
                             <div className="detail">
                                 <div className="d-flex justify-content-between align-items-center">
-                                    <div className="name" onClick={()=> navigate("/product-details/1")}>Silver Diamond Ring</div>
+                                    <div className="name" onClick={() => navigate("/product-details/1")}>Silver Diamond Ring</div>
 
                                     <div className='like'>
                                         <button type='button' className=''>
@@ -488,7 +499,7 @@ const Home = () => {
 
                             <div className="detail">
                                 <div className="d-flex justify-content-between align-items-center">
-                                    <div className="name" onClick={()=> navigate("/product-details/1")}>Silver Diamond Earrings</div>
+                                    <div className="name" onClick={() => navigate("/product-details/1")}>Silver Diamond Earrings</div>
 
                                     <div className='like'>
                                         <button type='button' className=''>
@@ -522,7 +533,7 @@ const Home = () => {
                 <div className='text-center'>
                     <h4 className='mb-0'>Get In Touch With Us</h4>
 
-                    <img src={FrameLight} alt="Frame" className='img-fluid frame' draggable={false} />
+                    <img src={ThemeMode ? FrameLight : FrameDark} alt="Frame" className='img-fluid frame' draggable={false} />
 
                     <p className=''>
                         Cal and Email for connect with our friendly team and also you can place the customize order.
@@ -533,7 +544,7 @@ const Home = () => {
                     <div className="col-lg-4">
                         <div className="contact_detail text-center">
                             <div className="image">
-                                <img src={CallLight} alt="Call" className='img-fluid' draggable={false} />
+                                <img src={ThemeMode ? CallLight : CallDark} alt="Call" className='img-fluid' draggable={false} />
                             </div>
 
                             <div className='title'>Call Us</div>
@@ -544,7 +555,7 @@ const Home = () => {
                     <div className="col-lg-4">
                         <div className="contact_detail text-center">
                             <div className="image">
-                                <img src={EmailLight} alt="Email" className='img-fluid' draggable={false} />
+                                <img src={ThemeMode ? EmailLight : EmailDark} alt="Email" className='img-fluid' draggable={false} />
                             </div>
 
                             <div className='title'>Email Us</div>

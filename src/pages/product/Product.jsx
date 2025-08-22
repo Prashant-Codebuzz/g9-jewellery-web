@@ -15,7 +15,11 @@ import UnLikeLight from "../../assets/images/account/unlike-light.svg";
 import UpArrowLight from "../../assets/images/product/up-arrow-light.svg";
 import DownArrowLight from "../../assets/images/product/down-arrow-light.svg";
 
+import useThemeMode from '../../hooks/useThemeMode';
+
 const Product = () => {
+
+    const ThemeMode = useThemeMode();
 
     const navigate = useNavigate();
 
@@ -271,7 +275,7 @@ const Product = () => {
 
                                                         <div className="detail">
                                                             <div className="d-flex justify-content-between align-items-center">
-                                                                <div className="name" onClick={()=> navigate("/product-details/1")}>{i.name}</div>
+                                                                <div className="name" onClick={() => navigate("/product-details/1")}>{i.name}</div>
 
                                                                 <div className='like'>
                                                                     <button type='button' className=''>

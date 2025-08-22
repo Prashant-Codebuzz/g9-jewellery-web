@@ -10,12 +10,21 @@ import EditLight from "../../../assets/images/account/edit-light.svg";
 import HomeLight from "../../../assets/images/account/home-light.svg";
 import WorkLight from "../../../assets/images/account/work-light.svg";
 import OtherLight from "../../../assets/images/account/other-light.svg";
+// Dark
+import EditDark from "../../../assets/images/account/edit-dark.svg";
+import HomeDark from "../../../assets/images/account/home-dark.svg";
+import WorkDark from "../../../assets/images/account/work-dark.svg";
+import OtherDark from "../../../assets/images/account/other-dark.svg";
+
 
 import AccountSidebar from '../../../components/account-sidebar/AccountSidebar';
 import { useDispatch, useSelector } from 'react-redux';
 import { reqtoGetProfile, reqtoUserAddress } from '../../../redux-Toolkit/services/AccountServices';
+import useThemeMode from '../../../hooks/useThemeMode';
 
 const Account = () => {
+
+    const ThemeMode = useThemeMode();   
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -71,7 +80,7 @@ const Account = () => {
                                                 navigate(`/account/edit/1`)
                                             }}
                                         >
-                                            <img src={EditLight} alt="" className='img-fluid' draggable={false} />
+                                            <img src={ThemeMode ? EditLight : EditDark} alt="" className='img-fluid' draggable={false} />
                                         </button>
                                     </div>
                                     <div className="email">
@@ -87,29 +96,29 @@ const Account = () => {
                                 {/* {
                                     userAddress && (
                                         <> */}
-                                            <div className="line"></div>
+                                <div className="line"></div>
 
-                                            <div className="user_address">
-                                                <div className='title'>Primary Address</div>
+                                <div className="user_address">
+                                    <div className='title'>Primary Address</div>
 
-                                                <div className='title d-flex align-items-center'>
-                                                    <img src={HomeLight} alt="" className='img-fluid me-3' draggable={false} />
-                                                    {/* <img src={userAddress?.address_type === 'Home' ? HomeLight : userAddress?.address_type === 'Work' ? WorkLight : OtherLight} alt="" className='img-fluid me-3' draggable={false} /> */}
+                                    <div className='title d-flex align-items-center'>
+                                        <img src={ThemeMode ? HomeLight : HomeDark} alt="" className='img-fluid me-3' draggable={false} />
+                                        {/* <img src={userAddress?.address_type === 'Home' ? HomeLight : userAddress?.address_type === 'Work' ? WorkLight : OtherLight} alt="" className='img-fluid me-3' draggable={false} /> */}
 
-                                                    Home
-                                                    {/* {userAddress?.address_type} */}
-                                                </div>
+                                        Home
+                                        {/* {userAddress?.address_type} */}
+                                    </div>
 
-                                                <p className='mb-0'>
-                                                    123, Shyamdham Soc, Nana Varachha <br />
-                                                    Surat, Gujarat, India - 395006
+                                    <p className='mb-0'>
+                                        123, Shyamdham Soc, Nana Varachha <br />
+                                        Surat, Gujarat, India - 395006
 
-                                                    {/* {userAddress?.address_line_1} <br />
+                                        {/* {userAddress?.address_line_1} <br />
                                                     {userAddress?.city}, {userAddress?.state}, {userAddress?.country} - {userAddress?.postal_code} */}
 
-                                                </p>
-                                            </div>
-                                        {/* </>
+                                    </p>
+                                </div>
+                                {/* </>
                                     )
                                 } */}
 

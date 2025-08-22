@@ -12,9 +12,15 @@ import FenilShah from "../../assets/images/about/fenil-shah.svg";
 
 // Light
 import AboutUsLight from "../../assets/images/about/about-us-light.svg";
+// Dark
+import AboutUsDark from "../../assets/images/about/about-us-dark.svg";
 
+import useThemeMode from '../../hooks/useThemeMode';
 
 const About = () => {
+
+    const ThemeMode = useThemeMode();
+
     return (
         <>
 
@@ -40,7 +46,7 @@ const About = () => {
                     </div>
                     <div className="col-lg-3">
                         <div className="image d-flex justify-content-lg-end">
-                            <img src={AboutUsLight} alt="About Us" className='img-fluid' draggable={false} />
+                            <img src={ThemeMode ? AboutUsLight : AboutUsDark} alt="About Us" className='img-fluid' draggable={false} />
                         </div>
                     </div>
                 </div>

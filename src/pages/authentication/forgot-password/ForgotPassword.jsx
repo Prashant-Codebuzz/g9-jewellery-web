@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { reqtoForgetPassword } from '../../../redux-Toolkit/services/AuthServices';
 import { toast } from 'react-toastify';
 import { loaders } from '../../../components/loader/Loader';
+import useThemeMode from '../../../hooks/useThemeMode';
 // import GoogleIcon from "../../../assets/images/authentication/google-icon.svg";
 
 const initialState = {
@@ -20,6 +21,8 @@ const initialState = {
 }
 
 const ForgotPassword = () => {
+
+    const ThemeMode = useThemeMode();
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -61,7 +64,7 @@ const ForgotPassword = () => {
         // console.log("reqtoForgetPassword--> Res", res);
 
         // if (res.payload?.status) {
-            navigate("/otp-method");
+        navigate("/otp-method");
         // }
     }
 
@@ -72,7 +75,7 @@ const ForgotPassword = () => {
                 <div className="row justify-content-center align-items-center h-100">
                     <div className="col-10 col-sm-9 col-md-7 col-lg-6 col-xl-5 col-xxl-4">
                         <div className="logo text-center">
-                            <img src={LogoLight} alt="Logo" className='img-fluid' draggable={false} />
+                            <img src={ThemeMode ? LogoLight : LogoDark} alt="Logo" className='img-fluid' draggable={false} />
                         </div>
 
                         <form onSubmit={handleSubmit}>
@@ -91,9 +94,9 @@ const ForgotPassword = () => {
                                             name='identifier'
                                             placeholder=''
                                             className='form-control'
-                                            // value={formData.identifier}
-                                            // onChange={handleChange}
-                                            // required
+                                        // value={formData.identifier}
+                                        // onChange={handleChange}
+                                        // required
                                         />
                                     </div>
                                 </div>

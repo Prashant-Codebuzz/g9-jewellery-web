@@ -15,6 +15,7 @@ import ThemeToggle from './components/theme-toggle/ThemeToggle';
 import DefaultLayout from './components/layout/default-layout/DefaultLayout';
 import Account from './pages/account/my-account/Account';
 import Orders from './pages/account/my-orders/Orders';
+import OrderDetails from './pages/account/order-details/OrderDetails';
 import Address from './pages/account/address/Address';
 import EditAccount from './pages/account/my-account/edit/EditAccount';
 import CreateAddress from './pages/account/address/create/CreateAddress';
@@ -62,6 +63,7 @@ function App() {
                     <Route path='/account' element={<Account />} />
                     <Route path='/account/edit/:id' element={<EditAccount />} />
                     <Route path='/orders' element={<Orders />} />
+                    <Route path='/order-details/:id' element={<OrderDetails />} />
                     <Route path='/address' element={<Address />} />
                     <Route path='/address/create' element={<CreateAddress />} />
                     <Route path='/address/edit/:id' element={<EditAddress />} />

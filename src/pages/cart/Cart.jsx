@@ -6,11 +6,21 @@ import "./Cart.scss"
 
 // Image
 import OrderImg from "../../assets/images/account/my-orders.svg";
+
+// Light
 import Minus from "../../assets/images/cart/minus.svg";
 import Plus from "../../assets/images/cart/plus.svg";
 import Delete from "../../assets/images/cart/delete.svg";
+// Dark
+import MinusDark from "../../assets/images/cart/minus-dark.svg";
+import PlusDark from "../../assets/images/cart/plus-dark.svg";
+import DeleteDark from "../../assets/images/cart/delete-dark.svg";
+
+import useThemeMode from '../../hooks/useThemeMode';
 
 const Cart = () => {
+
+    const ThemeMode = useThemeMode();
 
     const navigate = useNavigate();
 
@@ -69,7 +79,7 @@ const Cart = () => {
                                     return (
                                         <div className="order_box d-flex align-items-center" key={index}>
                                             <button type='button' className='delete_order' >
-                                                <img src={Delete} alt="Minus" className='img-fluid' draggable={false} />
+                                                <img src={ThemeMode ? Delete : DeleteDark} alt="Minus" className='img-fluid' draggable={false} />
                                             </button>
 
                                             <div className="image">
@@ -88,14 +98,14 @@ const Cart = () => {
                                                         onClick={() => handleMinusQty(index)}
                                                         disabled={quantity[index] === 1}
                                                     >
-                                                        <img src={Minus} alt="Minus" className='img-fluid' draggable={false} />
+                                                        <img src={ThemeMode ? Minus : MinusDark} alt="Minus" className='img-fluid' draggable={false} />
                                                     </button>
                                                     <span>{quantity[index]}</span>
                                                     <button
                                                         type='button'
                                                         onClick={() => handlePlusQty(index)}
                                                     >
-                                                        <img src={Plus} alt="Plus" className='img-fluid' draggable={false} />
+                                                        <img src={ThemeMode ? Plus : PlusDark} alt="Plus" className='img-fluid' draggable={false} />
                                                     </button>
                                                 </div>
                                             </div>

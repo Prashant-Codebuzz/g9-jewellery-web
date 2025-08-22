@@ -5,9 +5,16 @@ import { Link, useNavigate } from 'react-router-dom';
 import "./OrderConfirmation.scss"
 
 // Image
+// Light
 import OrderPlace from "../../assets/images/cart/order_placed.svg";
+// Dark
+import OrderPlaceDark from "../../assets/images/cart/order_placed-dark.svg";
+
+import useThemeMode from '../../hooks/useThemeMode';
 
 const OrderConfirmation = () => {
+
+    const ThemeMode = useThemeMode();
 
     const navigate = useNavigate();
 
@@ -23,13 +30,13 @@ const OrderConfirmation = () => {
                 </p>
 
                 <div className='order_placed_image'>
-                    <img src={OrderPlace} alt="Order Placed" className='img-fluid' draggable={false} />
+                    <img src={ThemeMode ? OrderPlace : OrderPlaceDark} alt="Order Placed" className='img-fluid' draggable={false} />
                 </div>
 
                 <h4>Order ID: #569848</h4>
 
                 <p>
-                    <Link>View Order Details</Link>
+                    <Link to={`/order-details/${1}`}>View Order Details</Link>
                 </p>
 
                 <button type='button' className='main_btn back_to_home' onClick={() => navigate("/home")}>

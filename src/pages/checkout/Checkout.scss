@@ -5,7 +5,6 @@
     padding-block: 80px;
 
     .checkout_top {
-
         .page_menu,
         p {
             font-family: $avenir;
@@ -61,7 +60,7 @@
                     padding-block: 16px;
                     background-color: $color7;
                     color: $theme-toggle-border;
-                    outline: 1px solid $main-btn-color;
+                    outline: 1px solid $theme-toggle-border;
                 }
             }
 

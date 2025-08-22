@@ -14,6 +14,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { loaders } from '../loader/Loader';
 import { reqtoOtpVerification } from '../../redux-Toolkit/services/AuthServices';
 import { signUpResendOtp } from '../../redux-Toolkit/slices/AuthSlice';
+import useThemeMode from '../../hooks/useThemeMode';
 
 const initialOtpState = ["", "", "", "", "", ""];
 
@@ -23,6 +24,8 @@ const initialResendState = {
 };
 
 const OtpVerification = () => {
+
+    const ThemeMode = useThemeMode();
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -145,7 +148,7 @@ const OtpVerification = () => {
                 <div className="row justify-content-center align-items-center h-100">
                     <div className="col-10 col-sm-9 col-md-7 col-lg-6 col-xl-5 col-xxl-4">
                         <div className="logo text-center">
-                            <img src={LogoLight} alt="Logo" className='img-fluid' draggable={false} />
+                            <img src={ThemeMode ? LogoLight : LogoDark} alt="Logo" className='img-fluid' draggable={false} />
                         </div>
 
                         <form onSubmit={handleSubmit}>
@@ -255,7 +258,7 @@ const OtpVerification = () => {
                                         disabled={loader}
                                     >
                                         {
-                                            loader ? loaders.btn : 'VERIFY OTP'
+                                            loader ? loaders.btn : 'VERIFY'
                                         }
                                     </button>
                                 </div>
